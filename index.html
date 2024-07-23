@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change bg</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="section" id="content">
+        <div class="container">
+            <h1 id="myh1">Background Color : </h1>
+            <button type="submit" onclick="changeColor()">Click here</button>
+        </div>
+    </div>
+
+    <script>
+        const colors = ['lemonchiffon','lightgreen','lightskyblue','burlywood','lightcoral','lightslategray'];
+
+        function changeColor(){
+            let random = Math.floor(Math.random()*colors.length);
+            document.getElementById('myh1').innerHTML = `Background Color : ${colors[random]}`;
+            document.getElementById('content').style.backgroundColor = colors[random];
+        }
+    </script>
+</body>
+</html>
